@@ -10,6 +10,7 @@ forcasted=zeros(N-10,population);
 %      disp(cartouche);
       pop(index).processing(cartouche);
      forcasted(ind-10,index)=pop(index).output;
+     
    end
  end
 end

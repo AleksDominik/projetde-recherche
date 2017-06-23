@@ -16,6 +16,7 @@ classdef layer<handle
                 lay.Listneur(h).crossover(lay1.Listneur(h));
             end
         end
+      
         function lay=petmutation(lay)
            for h=1:lay.nombredeneurone
                 lay.Listneur(h).petmutation();
@@ -62,7 +63,13 @@ classdef layer<handle
             
         end
         
-        
+        function la=egalite(la,la1)
+            
+            for h=1:la.nombredeneurone
+                la.Listneur(h).egalite(la1.Listneur(h));
+            end
+    
+        end
     end
     
 end

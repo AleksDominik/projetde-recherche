@@ -1,4 +1,6 @@
-function pop = crossover1( pop,Propo,DIA,N)
+function pop= petmutation(  Propo,pop,N,DIA  )
+%UNTITLED Summary of this function goes here
+%   Detailed explanation goes here
 h=size(pop);
 tes=init(Propo);
 %variable de calcul
@@ -6,23 +8,21 @@ tes=init(Propo);
 for in=1:Propo
     
     tes(in).egalite(pop(round(1+(h(2)-1)*rand)));
-    tes(in).crossover(pop(1));
+    tes(in).petmutationnet();
 
 end  
-      forcasted= forcast( N,tes,DIA);
+forcasted= forcast( N,tes,DIA);
       er=error1( forcasted ,N,tes,DIA);
- for ini=1:Propo
-       disp('les valeurs compare');
-       disp(tes(ini).erreur);
-       disp(pop(h(2)).erreur);
-      if tes(ini).erreur < pop(1).erreur
+for ini=1:Propo
+     
+      if tes(ini).erreur<pop(1).erreur
 %           delete(pop(h(2)));
           pop(h(2)).egalite(tes(ini));
-          disp('crossover effectue');
+          disp('petite mutation effectue');
           pop=order(pop);
 %           break
       end
     
-   end   
+end 
 end
 

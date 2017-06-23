@@ -40,12 +40,12 @@ classdef network<handle
 %            net.c(d);
 %          disp('jdjf');
            net.niveau0=layer(d,d);
-           net.niveau1=layer(3,d);
-           net.niveau2=layer(3,3);
+           net.niveau1=layer(6,d);
+           net.niveau2=layer(6,6);
            
 %            net.niveau21=layer(11,d);
 %           
-           net.niveau3=layer(1,3) ;
+           net.niveau3=layer(1,6) ;
         end
         function net=processing(net,Listinput)
          %initialisation de la premiere couche
@@ -87,7 +87,7 @@ classdef network<handle
           net.niveau2.egalite(net1.niveau2);
           net.niveau21.egalite(net1.niveau21);
           net.niveau3.egalite(net1.niveau3);
-          net.erreur=net1.erreur;
+          net.erre
           
          end
     end

@@ -20,7 +20,7 @@ classdef neurone<handle
             neur.lambda=(neur.lambda+neur1.lambda)/2;
         end
         function Obj= neurone(b)% b le nombre de lambda donc dimput
-            Obj.lambda=-5+10*rand(1,b);
+            Obj.lambda= -5+10*rand(1,b);
             Obj.input=zeros(1,b);
         end 
         function neu=petmutation(neu)
@@ -51,6 +51,12 @@ classdef neurone<handle
             disp(O.output);
             disp(O.input);
             
+        end
+        function neur=egalite(neur,neur1)
+          neur.lambda=neur1.lambda;
+          neur.input=neur1.input;
+          neur.output=neur1.output;
+         
         end
             
     end

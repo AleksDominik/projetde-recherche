@@ -11,11 +11,8 @@ for in=1:Propo
 end  
       forcasted= forcast( N,tes,DIA);
       er=error1( forcasted ,N,tes,DIA);
- for ini=1:Propo
-       disp('les valeurs compare');
-       disp(tes(ini).erreur);
-       disp(pop(h(2)).erreur);
-      if tes(ini).erreur < pop(1).erreur
+   for ini=1:Propo
+      if tes(ini).erreur <pop(h(2)).erreur
 %           delete(pop(h(2)));
           pop(h(2)).egalite(tes(ini));
           disp('crossover effectue');
